@@ -1,0 +1,72 @@
+.crd {
+    background-color: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    height: 15rem;
+    border-radius: 5px;
+
+    .tp-ln {
+        height: 4px;
+        background-color: hsl(208, 92%, 53%);
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    .bdy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        .nm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            column-gap: 5px;
+            .icn {
+            }
+            .usr-nm {
+                color: var(--font);
+            }
+        }
+        .folwr {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 1rem 0;
+            .folwr-cnt {
+                color: var(--font);
+                font-size: 4rem;
+                font-weight: 700;
+            }
+            .folwr-txt {
+                color: var(--font-desat);
+                font-size: 1rem;
+                font-weight: 400;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+            }
+        }
+        .btm-st {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            column-gap: 6px;
+            .st-icon {
+            }
+            .st-txt{
+              font-size: 14px;
+              font-weight: 700;
+            }
+            .red {
+                color: hsl(356, 69%, 56%);
+            }
+            .green {
+                color: hsl(163, 72%, 41%);
+            }
+        }
+    }
+}
