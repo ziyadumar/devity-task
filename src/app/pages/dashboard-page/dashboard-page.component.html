@@ -1,0 +1,58 @@
+<div class="ctnt-full">
+  <div class="tp-hlf">
+    <div class="tp-br">
+      <div class="hdng">
+        <div class="txt">Social Media Dashboard</div>
+        <div class="tl-folwr">Total followers: 3435</div>
+      </div>
+      <div class="actn">
+        <div class="actn-txt">Dark Mode</div>
+        <div class="actn-tgl">
+          <mat-slide-toggle class="toggle adjust" [(ngModel)]="!isDark" (ngModelChange)="onThemeChange()">
+
+          </mat-slide-toggle>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bt-hlf">
+
+    <div class="stats-top" cdkDropList (cdkDropListDropped)="drop($event)">
+      <app-stats-complete class="card" *ngFor="let data of datas" [card]='data'></app-stats-complete>
+    </div>
+    <div class="hdng-2">
+      Overview - Today
+    </div>
+    <div class="stats-btm">
+      <app-stats-daily class="sm-card" *ngFor="let detail of details" [detail]='detail'></app-stats-daily>
+    </div>
+  </div>
+</div>
+
+<!--
+<div class="tp-hlf"></div>
+<div class="container">
+  <div class="tp-br">
+    <div class="hdng">
+      <div class="txt">Social Media Dashboard</div>
+      <div class="tl-folwr">Total followers: 3435</div>
+    </div>
+    <div class="actn">
+      <div class="actn-txt">Dark Mode</div>
+      <div class="actn-tgl"></div>
+    </div>
+  </div>
+  <div class="stats-top">
+    <app-stats-complete class="card" *ngFor="let data of datas" [card]='data'></app-stats-complete>
+  </div>
+  <div class="Text2"></div>
+  <div class="gridd">
+    <div class="b2"></div>
+    <div class="b3"></div>
+    <div class="b4"></div>
+    <div class="b5"></div>
+    <div class="b6"></div>
+    <div class="b7"></div>
+    <div class="b8"></div>
+  </div>
+</div> -->
