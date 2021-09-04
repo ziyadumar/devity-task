@@ -14,6 +14,7 @@ export class ApiService {
   fetch_overall_stat(): Card[] {
     return [
       {
+        platform: 'facebook',
         count: '1987',
         isProgress: true,
         icon: 'icon-facebook.svg',
@@ -21,6 +22,7 @@ export class ApiService {
         username: '@nathanf'
       },
       {
+        platform: 'twitter',
         count: '1044',
         isProgress: true,
         icon: 'icon-twitter.svg',
@@ -28,6 +30,7 @@ export class ApiService {
         username: '@nathanf'
       },
       {
+        platform: 'instagram',
         count: '11k',
         isProgress: true,
         icon: 'icon-instagram.svg',
@@ -35,6 +38,7 @@ export class ApiService {
         username: '@nathanf'
       },
       {
+        platform: 'youtube',
         count: '8239',
         isProgress: false,
         icon: 'icon-youtube.svg',
