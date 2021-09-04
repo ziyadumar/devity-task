@@ -30,20 +30,19 @@
                     color: var(--font-desat);
                     font-weight: 700;
                 }
+                // hovering outer elemenet and changing inner element style
+                &:hover > .actn-txt {
+                  color: var(--font-hov);
+                }
                 .actn-tgl {
                     mat-slide-toggle-bar {
                         background: red;
                     }
-
                     ::ng-deep .mat-slide-toggle .mat-slide-toggle-bar {
                         border-radius: 1rem;
                         width: 40px;
                         height: 23px;
                         background: var(--tog-bar);
-                        // border: 1px solid #ffffff;
-                        // box-sizing: border-box;
-                        // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1),
-                        //     inset 0px 4px 4px rgba(0, 0, 0, 0.15);
                         &:hover {
                             background: var(--tog-bar);
                         }
@@ -96,18 +95,6 @@
                         height: 20px;
                     }
 
-                    // //@at-root
-                    // ::ng-deep
-                    //     .mat-slide-toggle.mat-checked.mat-slide-toggle-thumb {
-                    //     position: absolute;
-                    //     top: 2px;
-                    //     right: -2px;
-                    //     background: red;
-                    //     // box-shadow: inset 0px -4px 4px rgba(0, 0, 0, 0.25);
-                    //     width: 20px;
-                    //     height: 20px;
-                    // }
-
                     ::ng-deep
                         .mat-slide-toggle.mat-checked
                         .mat-ripple-element {
@@ -131,8 +118,16 @@
             row-gap: 2rem;
             .card {
                 width: 22%;
+                cursor: move;
+            }
+            .card:last-child {
+                border: none;
             }
         }
+        .stats-top.cdk-drop-list-dragging .card:not(.cdk-drag-placeholder) {
+            transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+        }
+
         .hdng-2 {
             margin-top: 3rem;
             color: var(--font-desat);
@@ -152,6 +147,12 @@
             .sm-card {
                 width: 22%;
             }
+            .sm-card:last-child {
+                border: none;
+            }
+        }
+        .stats-btm.cdk-drop-list-dragging .sm-card:not(.cdk-drag-placeholder) {
+            transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
         }
     }
 }
@@ -192,4 +193,19 @@
             }
         }
     }
+}
+
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+        0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }

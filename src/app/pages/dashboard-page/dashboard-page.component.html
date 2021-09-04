@@ -17,14 +17,15 @@
   </div>
   <div class="bt-hlf">
 
-    <div class="stats-top" cdkDropList (cdkDropListDropped)="drop($event)">
-      <app-stats-complete class="card" *ngFor="let data of datas" [card]='data'></app-stats-complete>
+    <div class="stats-top" cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="dropData($event)">
+      <app-stats-complete class="card" *ngFor="let data of datas" [card]='data' cdkDrag></app-stats-complete>
     </div>
     <div class="hdng-2">
       Overview - Today
     </div>
-    <div class="stats-btm">
-      <app-stats-daily class="sm-card" *ngFor="let detail of details" [detail]='detail'></app-stats-daily>
+    <div class="stats-btm" cdkDropList (cdkDropListDropped)="dropDetails($event)">
+      <app-stats-daily class="sm-card" *ngFor="let detail of details; trackBy: trackByFunc" [detail]='detail' cdkDrag>
+      </app-stats-daily>
     </div>
   </div>
 </div>

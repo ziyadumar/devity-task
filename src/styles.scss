@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+}
+
+:root {
+    // colors for light theme
+    --bg-top: hsl(225, 100%, 98%);
+    --bg: hsl(0, 0%, 100%);
+    --card-bg: hsl(227, 47%, 96%);
+    --card-bg-hov: rgb(225, 229, 241);
+    --font: hsl(230, 17%, 14%);
+    --font-desat: hsl(228, 12%, 44%);
+    --font-hov: hsl(228, 16%, 36%);
+
+    --tog-bar: hsl(230, 22%, 74%);
+    --tog-handle: hsl(225, 100%, 98%);
+    --tog-bar-hov: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --font-stat: black;
+    // colors for dark theme
+    // --dark-bg-top: hsl(232, 19%, 15%);
+    // --dark-bg: hsl(230, 17%, 14%);
+    // --dark-card-bg: hsl(228, 28%, 20%);
+    // --dark-font: hsl(0, 0%, 100%);
+    // --dark-font-desat: hsl(228, 34%, 66%);
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
