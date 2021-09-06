@@ -52,6 +52,7 @@ export class ApiService {
   fetch_stat_details(): Detail[] {
     return [
       {
+        id: 1,
         count: '87',
         icon: 'icon-facebook.svg',
         isProgress: true,
@@ -59,6 +60,7 @@ export class ApiService {
         percentage: 3
       },
       {
+        id: 2,
         count: '52',
         icon: 'icon-facebook.svg',
         isProgress: false,
@@ -66,6 +68,7 @@ export class ApiService {
         percentage: 2
       },
       {
+        id: 3,
         count: '5462',
         icon: 'icon-instagram.svg',
         isProgress: true,
@@ -73,6 +76,7 @@ export class ApiService {
         percentage: 2257
       },
       {
+        id: 4,
         count: '52k',
         icon: 'icon-instagram.svg',
         isProgress: true,
@@ -80,6 +84,7 @@ export class ApiService {
         percentage: 1375
       },
       {
+        id: 5,
         count: '117',
         icon: 'icon-twitter.svg',
         isProgress: true,
@@ -87,6 +92,7 @@ export class ApiService {
         percentage: 303
       },
       {
+        id: 6,
         count: '507',
         icon: 'icon-twitter.svg',
         isProgress: true,
@@ -94,6 +100,7 @@ export class ApiService {
         percentage: 553
       },
       {
+        id: 7,
         count: '107',
         icon: 'icon-youtube.svg',
         isProgress: false,
@@ -101,6 +108,7 @@ export class ApiService {
         percentage: 19
       },
       {
+        id: 8,
         count: '1407',
         icon: 'icon-youtube.svg',
         isProgress: false,
