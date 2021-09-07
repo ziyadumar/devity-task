@@ -1,0 +1,39 @@
+<div class="card">
+  <input type="checkbox" id="{{detail.id}}" class="more" aria-hidden="true">
+  <div class="content">
+    <div class="front">
+      <div class="body">
+        <section class="tp">
+          <div class="lft">
+            <img src="../../../assets/app-icons/{{detail.icon}}" class="icn" />
+            <div class="txt">{{detail.text}}</div>
+          </div>
+          <label class="button" for="{{detail.id}}">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">more_horiz</mat-icon>
+          </label>
+        </section>
+        <div class="bt">
+          <div class="count">{{detail.count}}</div>
+          <div class="btm-st">
+            <img class="st-icon"
+              src="../../../assets/app-icons/{{detail.isProgress ? 'icon-up.svg': 'icon-down.svg'}}" />
+            <div class="st-txt" [ngStyle]="{ 'color': detail.isProgress ? 'hsl(163, 72%, 41%)' : 'hsl(356, 69%, 56%)'}">
+              {{detail.percentage}}%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="back">
+      <div class="innerb">
+        <div>
+          <div>
+            <label class="button" for="{{detail.id}}">
+              <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_back</mat-icon>
+            </label>
+          </div>
+        </div>
+        <div class="summary" [innerHTML]="detail | Summary"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="crd">
+  <div class="tp-ln" [ngStyle]="{'background': colorCode}"></div>
+  <div class="bdy">
+    <mat-icon class="icoo drag-handle" aria-hidden="false" aria-label="Example home icon"><ng-content></ng-content>drag_indicator</mat-icon>
+    <div class="nm">
+      <img src="../../../assets/app-icons/{{card.icon}}" class="icn" />
+      <div class="usr-nm">{{card.username}}</div>
+    </div>
+    <div class="folwr">
+      <div class="folwr-cnt">{{card.count}}</div>
+      <div class="folwr-txt">Followers</div>
+    </div>
+    <div class="btm-st">
+      <img class="st-icon" src="../../../assets/app-icons/{{card.isProgress ? 'icon-up.svg': 'icon-down.svg'}}" />
+      <div class="st-txt" [ngStyle]="{ 'color': card.isProgress ? 'hsl(163, 72%, 41%)' : 'hsl(356, 69%, 56%)'}">
+        {{card.percentage}} Today</div>
+    </div>
+  </div>
+</div>
