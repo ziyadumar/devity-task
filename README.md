@@ -30,7 +30,7 @@ Please search the project using the `TAG`s below
 - CdkDragHandle passed into child component using <ng-content> `TAG-4`
 - Unit test (10 no.s)
 
-####Note: 
+#### Note:
 Several fetures are just used for illustration purposes without the actual need.
 e.g.: Lazyloading, trackby, combining Promises etc.
 
