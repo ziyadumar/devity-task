@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Detail } from '../interfaces/details.interface';
-import { Card } from '../interfaces/card.interface';
+import { Detail } from '../../shared/interfaces/details.interface';
+import { Card } from '../../shared/interfaces/card.interface';
 
 @Injectable({
   providedIn: 'root'

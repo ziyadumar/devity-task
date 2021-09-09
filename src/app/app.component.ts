@@ -9,9 +9,7 @@ import { ThemeService } from './core/services/theme.service';
 export class AppComponent {
   title = 'Devity Task';
 
-  constructor(private theme: ThemeService) {
-    this.theme.loadTheme();
-  }
+  constructor() { }
 
 
 }
