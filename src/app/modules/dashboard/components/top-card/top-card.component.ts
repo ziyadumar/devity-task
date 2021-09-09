@@ -17,7 +17,7 @@ export class TopCardComponent implements OnInit {
   colors = ColorSchema;
   ngOnInit(): void {
     // picking color code for the card line when each component is instanciated
-    this.colorCode = ColorSchema[this.card.platform] ?? 'grey'; // from an enum
+    this.colorCode = ColorSchema[this.card?.platform] ?? 'grey'; // from an enum
   }
 
 

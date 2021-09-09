@@ -1,6 +1,7 @@
-<div class="crd">
+<div class="crd" *ngIf="card">
   <div class="tp-ln" [ngStyle]="{'background': colorCode}"></div>
   <div class="bdy">
+    <!-- TAG-4 -->
     <mat-icon class="icoo drag-handle" aria-hidden="false" aria-label="Example home icon"><ng-content></ng-content>drag_indicator</mat-icon>
     <div class="nm">
       <img src="../../../assets/app-icons/{{card.icon}}" class="icn" />

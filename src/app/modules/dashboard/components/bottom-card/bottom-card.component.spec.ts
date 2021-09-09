@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatIconModule } from '@angular/material/icon';
 import { SummaryPipe } from 'src/app/shared/pipes/card-info.pipe';
 import { SharedModule } from 'src/app/shared/shared.module';
 
