@@ -18,17 +18,17 @@
   <div class="bt-hlf">
     <div class="stats-top" cdkDropList cdkDropListOrientation="{{ mobileView ? 'vertical' : 'horizontal'}}"
       (cdkDropListDropped)="dropData($event)">
-      <app-stats-complete class="card" *ngFor="let data of datas" [card]='data' cdkDrag>
+      <app-top-card class="card" *ngFor="let data of datas" [card]='data' cdkDrag>
         <div cdkDragHandle></div>
-      </app-stats-complete>
+      </app-top-card>
     </div>
     <div class="hdng-2">
       Overview - Today
     </div>
     <div class="stats-btm">
       <!-- TAG-2 -->
-      <app-stats-daily class="sm-card" *ngFor="let detail of details; trackBy: trackByFunc" [detail]='detail'>
-      </app-stats-daily>
+      <app-bottom-card class="sm-card" *ngFor="let detail of details; trackBy: trackByFunc" [detail]='detail'>
+      </app-bottom-card>
     </div>
   </div>
 </div>

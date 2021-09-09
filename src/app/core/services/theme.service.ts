@@ -7,7 +7,9 @@ import { getSunrise, getSunset } from 'sunrise-sunset-js';
 export class ThemeService {
 
   isDark;
-  constructor() { }
+  constructor() {
+    this.loadTheme();
+  }
 
   toggleIsDark(isDark: boolean) {
     // navigator.geolocation.getCurrentPosition(function (position) {
@@ -50,7 +52,6 @@ export class ThemeService {
   }
 
   loadTheme() {
-    // let isDark = false;
     try {
       const hasSaved = localStorage.getItem('themeIsDark');
       if (hasSaved) {
