@@ -1,5 +1,5 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { browser, by, element, ElementArrayFinder, logging, protractor } from 'protractor';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('devity-task app is running!');
+    expect(await page.getTitleText()).toEqual('Social Media Dashboard');
   });
 
   afterEach(async () => {
