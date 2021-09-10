@@ -1,0 +1,40 @@
+<div class="ctnt-full">
+  <!-- upper part of dashboard with cards -->
+  <div class="tp-hlf">
+    <div class="tp-br">
+      <!-- top heading -->
+      <div class="hdng">
+        <div class="txt">Social Media Dashboard</div>
+        <div class="tl-folwr">Total followers: 3435</div>
+      </div>
+      <!-- separator -->
+      <hr class="solid">
+      <!-- toggle slider part -->
+      <div class="actn">
+        <div class="actn-txt">Dark Mode</div>
+        <div class="actn-tgl">
+          <mat-slide-toggle class="toggle adjust" [(ngModel)]="!isDark" (ngModelChange)="onThemeChange()">
+          </mat-slide-toggle>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- lower part of dashboard with cards -->
+  <div class="bt-hlf">
+    <!-- top cards : draggable -->
+    <div class="stats-top" cdkDropList cdkDropListOrientation="{{ mobileView ? 'vertical' : 'horizontal'}}"
+      (cdkDropListDropped)="dropData($event)">
+      <app-top-card class="card" *ngFor="let data of datas" [card]='data' cdkDrag>
+        <div cdkDragHandle></div>
+      </app-top-card>
+    </div>
+    <div class="hdng-2">
+      Overview - Today
+    </div>
+    <!-- bottom cards -->
+    <div class="stats-btm">  <!-- TAG-2 -->
+      <app-bottom-card class="sm-card" *ngFor="let detail of details; trackBy: trackByFunc" [detail]='detail'>
+      </app-bottom-card>
+    </div>
+  </div>
+</div>

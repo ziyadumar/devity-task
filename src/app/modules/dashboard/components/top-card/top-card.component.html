@@ -1,0 +1,28 @@
+<div class="crd" *ngIf="card">
+  <!-- the colored top line of the card  -->
+  <div class="tp-ln" [ngStyle]="{'background': colorCode}"></div>
+  <!-- rest of the body -->
+  <div class="bdy">
+    <!-- TAG-4 -->
+    <mat-icon class="icoo drag-handle" aria-hidden="false" aria-label="Example home icon">
+      <!-- drag handler -->
+      <ng-content></ng-content>drag_indicator
+    </mat-icon>
+    <!-- user name and social media icon -->
+    <div class="nm">
+      <img src="../../../assets/app-icons/{{card.icon}}" class="icn" />
+      <div class="usr-nm">{{card.username}}</div>
+    </div>
+    <!-- follower counts -->
+    <div class="folwr">
+      <div class="folwr-cnt">{{card.count}}</div>
+      <div class="folwr-txt">Followers</div>
+    </div>
+    <!-- botton part with statistics -->
+    <div class="btm-st">
+      <img class="st-icon" src="../../../assets/app-icons/{{card.isProgress ? 'icon-up.svg': 'icon-down.svg'}}" />
+      <div class="st-txt" [ngStyle]="{ 'color': card.isProgress ? 'hsl(163, 72%, 41%)' : 'hsl(356, 69%, 56%)'}">
+        {{card.percentage}} Today</div>
+    </div>
+  </div>
+</div>

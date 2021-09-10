@@ -1,0 +1,45 @@
+<!-- flippable card -->
+<div class="card" *ngIf="detail">
+  <input type="checkbox" id="{{detail.id}}" class="more" aria-hidden="true">
+  <!-- whole content of the card -->
+  <div class="content">
+    <!-- front facing part of flip card -->
+    <div class="front">
+      <!-- inner part of front face -->
+      <div class="body">
+        <!-- top part with icon and more button -->
+        <div class="tp">
+          <div class="lft">
+            <img src="../../../assets/app-icons/{{detail.icon}}" class="icn" />
+            <div class="txt">{{detail.text}}</div>
+          </div>
+          <label class="button" for="{{detail.id}}">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">more_horiz</mat-icon>
+          </label>
+        </div>
+        <!-- bottom part with statistics -->
+        <div class="bt">
+          <div class="count">{{detail.count}}</div>
+          <div class="btm-st">
+            <img class="st-icon"
+              src="../../../assets/app-icons/{{detail.isProgress ? 'icon-up.svg': 'icon-down.svg'}}" />
+            <div class="st-txt" [ngStyle]="{ 'color': detail.isProgress ? 'hsl(163, 72%, 41%)' : 'hsl(356, 69%, 56%)'}">
+              {{detail.percentage}}%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- back part of the flip card -->
+    <div class="back">
+      <!-- inner part of back face -->
+      <div class="innerb">
+        <!-- back button -->
+        <label class="button" for="{{detail.id}}">
+          <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_back</mat-icon>
+        </label>
+        <!-- text content -->
+        <div class="summary" [innerHTML]="detail | summary"></div>
+      </div>
+    </div>
+  </div>
+</div>
